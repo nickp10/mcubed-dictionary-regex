@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>mCubed Dictionary Regex</title>
+		<link rel="stylesheet" type="text/css" href="dictionary-regex.css"></link>
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="dictionary-regex.js"></script>
+	</head>
+	<body>
+		<form onsubmit="showWords(); return false;">
+			<table class="content">
+				<tr>
+					<th colspan="2" class="center">Dictionary</th>
+				</tr>
+				<tr id="dictOptionsRow">
+					<td>
+						<strong>Dictionary:</strong><br /><br />
+						Determines which dictionary is being used to see which words match the given criteria.
+					</td>
+					<td>
+						<!--<input type="radio" name="dictionary" value="dictionaries/Test.txt" id="dictTest" />
+						<label for="dictTest">Test Dictionary</label><br />-->
+						<input type="radio" name="dictionary" value="dictionaries/WFTWL.txt" id="dictWFTWL" />
+						<label for="dictWFTWL">Wordfeud (TWL)</label><br />
+						<input type="radio" name="dictionary" value="dictionaries/WFSOWPODS.txt" id="dictWFSOWPODS" />
+						<label for="dictWFSOWPODS">Wordfeud (SOWPODS)</label><br />
+						<input type="radio" name="dictionary" value="dictionaries/WWF.txt" id="dictWWF" />
+						<label for="dictWWF">Words With Friends</label>
+					</td>
+				</tr>
+				<tr>
+					<td width="50%">
+						<strong>Loaded Dictionary:</strong><br /><br />
+						States the current loaded dictionary as well as whether or not it has been loaded.
+					</td>
+					<td width="50%">
+						<strong><span id="dictLabel"></span></strong><br />
+						<span id="dictStatus"></span>
+					</td>
+				</tr>
+				<tr>
+					<th colspan="2" class="center">Search Criteria</th>
+				</tr>
+				<tr>
+					<td>
+						<strong>Available Letters:</strong><br /><br />
+						Specifies which letters are available to create a word from with a question mark ("?") specifying a wild card or blank tile.
+					</td>
+					<td>
+						<input type="text" name="availLetters" id="availLetters" class="initialFocus" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Match Pattern:</strong><br /><br />
+						Specifies the regex pattern that will be used in combination with the available letters to determine matching words.
+					</td>
+					<td>
+						<input type="text" name="matchPattern" id="matchPattern" />
+					</td>
+				</tr>
+				<tr>
+					<th colspan="2" class="center">
+						<input type="submit" value="Show Words" />
+					</th>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<strong><em>* Word scores do NOT take into calculation: blank tile scores, letter multipliers, or word multipliers.</em></strong>
+						<div id="matches"></div>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

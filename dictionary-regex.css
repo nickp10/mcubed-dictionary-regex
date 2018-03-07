@@ -1,0 +1,44 @@
+.center {
+	text-align: center;
+}
+
+div.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content input[type=text], .content input[type=password] {
+	width: 250px;
+}
+
+table.content {
+	background-color: #000000;
+	border-spacing: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 30%;
+}
+
+table.content td {
+	background-color: #E4E7E9;
+	padding: 5px;
+}
+
+table.content th {
+	background-color: #CCCCCC;
+	font-weight: bold;
+	font-size: 14pt;
+	padding: 5px;
+}
+
+#matches table {
+	background-color: #000000;
+	border-spacing: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+}
+
+#matches th {
+	font-size: 12pt;
+}
